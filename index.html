@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jasa pembuatan website dan aplikasi untuk UMKM dan usaha kecil. Website bisnis, aplikasi kasir, keuangan, stok, mobile app dan aplikasi custom.">
+  <title>Jasa Website & Aplikasi | Solusi Digital untuk Bisnis</title>
+  <style>
+    :root{
+      --navy:#082b5c; --blue:#0879e8; --sky:#eaf5ff; --yellow:#ffbd2e;
+      --green:#20b77a; --text:#19324d; --muted:#60758a; --white:#fff;
+      --shadow:0 18px 50px rgba(8,43,92,.12); --radius:22px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid #e9eef4}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:900;color:var(--navy);font-size:20px}.logo span{color:var(--blue)}
+    .menu{display:flex;gap:28px;align-items:center;font-weight:700;font-size:14px}
+    .menu a:hover{color:var(--blue)}
+    .nav-cta{background:var(--yellow);padding:11px 18px;border-radius:999px;color:#142b44}
+    .hero{padding:82px 0 70px;background:linear-gradient(135deg,#f5fbff 0%,#fff 55%,#fff7dd 100%);overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+    .eyebrow{display:inline-block;background:#e3f1ff;color:var(--blue);font-weight:800;padding:8px 14px;border-radius:999px;margin-bottom:18px}
+    h1{font-size:clamp(38px,5vw,64px);line-height:1.08;color:var(--navy);letter-spacing:-2px}
+    h1 span{color:var(--blue)}
+    .hero p{font-size:18px;color:var(--muted);margin:22px 0 30px;max-width:610px}
+    .buttons{display:flex;gap:13px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:12px;font-weight:800}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(8,121,232,.25)}
+    .btn-secondary{border:2px solid #dce8f3;color:var(--navy);background:#fff}
+    .hero-card{background:#fff;border-radius:28px;padding:18px;box-shadow:var(--shadow);transform:rotate(1deg)}
+    .dashboard{border-radius:18px;background:#f4f9fd;padding:18px}
+    .dash-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+    .dot{width:9px;height:9px;border-radius:50%;background:#42d19a;display:inline-block;margin-right:6px}
+    .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .mini{padding:15px;background:#fff;border-radius:14px}.mini small{color:var(--muted)}.mini strong{display:block;font-size:20px;color:var(--navy)}
+    .chart{height:170px;background:#fff;border-radius:16px;margin-top:12px;display:flex;align-items:end;gap:8px;padding:18px}
+    .bar{flex:1;background:linear-gradient(#4ca8ff,#0879e8);border-radius:7px 7px 2px 2px}
+    section{padding:78px 0}
+    .section-title{text-align:center;max-width:700px;margin:0 auto 42px}
+    .section-title h2{font-size:38px;color:var(--navy);line-height:1.15}
+    .section-title p{color:var(--muted);margin-top:10px}
+    .services{background:#f8fbfe}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:#fff;padding:28px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(8,43,92,.07);border:1px solid #edf3f8}
+    .icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:25px;background:#e8f4ff;margin-bottom:18px}
+    .card h3{color:var(--navy);margin-bottom:8px;font-size:20px}.card p{color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}
+    .about-box{background:var(--navy);color:#fff;padding:36px;border-radius:28px}
+    .about-box h3{font-size:28px;margin-bottom:12px}.about-box p{color:#dcecff}
+    .checks{list-style:none;margin-top:20px}.checks li{margin:12px 0}.checks li:before{content:"✓";display:inline-grid;place-items:center;width:25px;height:25px;border-radius:50%;background:var(--green);margin-right:9px;font-weight:900}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{text-align:center;padding:24px}.number{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--navy);font-weight:900;margin:0 auto 14px}
+    .portfolio{background:#f8fbfe}.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .project{border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 8px 25px rgba(8,43,92,.07)}
+    .project-img{height:170px;background:linear-gradient(135deg,#0a3a76,#38a6ff);padding:20px;display:flex;align-items:flex-end}
+    .project-img div{background:#fff;border-radius:12px;padding:14px;width:100%;box-shadow:0 10px 20px #0002}
+    .project-body{padding:20px}.project-body h3{color:var(--navy)}.project-body p{color:var(--muted);font-size:14px}
+    .cta{padding:65px 0}.cta-box{background:linear-gradient(120deg,var(--navy),#0a65b9);color:#fff;border-radius:28px;padding:45px;display:flex;justify-content:space-between;gap:30px;align-items:center}
+    .cta-box h2{font-size:34px;line-height:1.15}.cta-box p{color:#dcecff;margin-top:10px}
+    .contact{background:#f8fbfe}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .contact-card{background:#fff;border-radius:22px;padding:28px;box-shadow:0 8px 25px rgba(8,43,92,.06)}
+    .contact-item{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1px solid #edf2f6}.contact-item:last-child{border:0}
+    .contact-icon{font-size:22px}.contact-item strong{display:block;color:var(--navy)}.contact-item span{color:var(--muted)}
+    footer{background:#061f42;color:#cfe0f2;padding:28px 0;text-align:center;font-size:14px}
+    .mobile-toggle{display:none;border:0;background:none;font-size:25px}
+    @media(max-width:850px){
+      .menu{display:none}.mobile-toggle{display:block}
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.cards,.portfolio-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}
+      .hero{padding-top:55px}.cta-box{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:560px){
+      .cards,.portfolio-grid,.steps{grid-template-columns:1fr}
+      .hero-card{transform:none}.section-title h2{font-size:30px}.cta-box{padding:30px}.cta-box h2{font-size:28px}
+      nav{height:64px}.nav-cta{display:none}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#home">Digital<span>Solusi</span></a>
+      <div class="menu">
+        <a href="#layanan">Layanan</a><a href="#tentang">Tentang</a><a href="#proses">Proses</a><a href="#portfolio">Portfolio</a><a href="#kontak">Kontak</a>
+        <a class="nav-cta" href="https://wa.me/6281260869484" target="_blank">Chat WhatsApp</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">💡 Solusi Digital untuk UMKM</div>
+      <h1>Wujudkan Bisnis Lebih <span>Mudah & Modern</span></h1>
+      <p>Kami membantu usaha kecil dan UMKM memiliki website dan aplikasi yang sesuai kebutuhan — mulai dari website bisnis, kasir, keuangan, stok hingga aplikasi custom.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://wa.me/6281260869484?text=Halo%2C%20saya%20ingin%20konsultasi%20pembuatan%20website%20atau%20aplikasi." target="_blank">💬 Konsultasi Gratis</a>
+        <a class="btn btn-secondary" href="#layanan">Lihat Layanan</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="dashboard">
+        <div class="dash-top"><strong>Business Dashboard</strong><span><i class="dot"></i>Online</span></div>
+        <div class="mini-grid">
+          <div class="mini"><small>Penjualan</small><strong>Rp 12,5 jt</strong></div>
+          <div class="mini"><small>Transaksi</small><strong>248</strong></div>
+          <div class="mini"><small>Produk</small><strong>126</strong></div>
+        </div>
+        <div class="chart">
+          <div class="bar" style="height:35%"></div><div class="bar" style="height:50%"></div><div class="bar" style="height:43%"></div><div class="bar" style="height:70%"></div><div class="bar" style="height:58%"></div><div class="bar" style="height:82%"></div><div class="bar" style="height:95%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="layanan">
+  <div class="container">
+    <div class="section-title"><h2>Layanan yang Kami Sediakan</h2><p>Pilih solusi sesuai kebutuhan bisnis Anda. Sistem dapat dikembangkan secara bertahap.</p></div>
+    <div class="cards">
+      <div class="card"><div class="icon">🌐</div><h3>Website Bisnis</h3><p>Website company profile, toko online, landing page, katalog produk dan kebutuhan bisnis lainnya.</p></div>
+      <div class="card"><div class="icon">🧾</div><h3>Aplikasi Kasir (POS)</h3><p>Kelola transaksi, produk, harga, stok, laporan penjualan dan kebutuhan kasir secara lebih teratur.</p></div>
+      <div class="card"><div class="icon">💰</div><h3>Aplikasi Keuangan</h3><p>Catat pemasukan, pengeluaran, arus kas dan laporan keuangan dengan lebih mudah.</p></div>
+      <div class="card"><div class="icon">📦</div><h3>Manajemen Stok</h3><p>Pantau persediaan barang, stok masuk, stok keluar dan riwayat perubahan stok.</p></div>
+      <div class="card"><div class="icon">📱</div><h3>Aplikasi Mobile</h3><p>Aplikasi Android atau solusi mobile yang dapat disesuaikan dengan proses bisnis Anda.</p></div>
+      <div class="card"><div class="icon">⚙️</div><h3>Custom Application</h3><p>Sistem khusus berdasarkan alur kerja, kebutuhan dan target bisnis Anda.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tentang">
+  <div class="container about-grid">
+    <div class="about-box">
+      <h3>Teknologi yang Dibuat untuk Bisnis Anda</h3>
+      <p>Kami fokus membuat solusi yang praktis, mudah digunakan dan dapat dikembangkan mengikuti pertumbuhan bisnis.</p>
+      <ul class="checks">
+        <li>Desain modern & user friendly</li>
+        <li>Dapat disesuaikan dengan kebutuhan</li>
+        <li>Support setelah implementasi</li>
+        <li>Cocok untuk UMKM & usaha kecil</li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-title" style="text-align:left;margin:0 0 20px"><h2>Mulai Digitalisasi Bisnis Anda</h2><p>Anda tidak harus langsung membuat sistem yang kompleks. Kita bisa mulai dari kebutuhan yang paling penting, kemudian dikembangkan secara bertahap.</p></div>
+      <a class="btn btn-primary" href="mailto:muhlis.alfati@gmail.com?subject=Konsultasi%20Website%20dan%20Aplikasi">✉️ Kirim Pertanyaan</a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="proses">
+  <div class="container">
+    <div class="section-title"><h2>Proses Pengerjaan</h2><p>Proses sederhana dan transparan dari konsultasi sampai sistem siap digunakan.</p></div>
+    <div class="steps">
+      <div class="step"><div class="number">1</div><h3>Konsultasi</h3><p>Diskusikan kebutuhan dan masalah bisnis.</p></div>
+      <div class="step"><div class="number">2</div><h3>Analisa & Desain</h3><p>Susun fitur, alur kerja dan tampilan.</p></div>
+      <div class="step"><div class="number">3</div><h3>Development</h3><p>Sistem dibangun dan diuji bersama.</p></div>
+      <div class="step"><div class="number">4</div><h3>Go Live</h3><p>Sistem diterapkan dan mendapatkan support.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="container">
+    <div class="section-title"><h2>Contoh Solusi</h2><p>Contoh jenis sistem yang dapat kami kembangkan.</p></div>
+    <div class="portfolio-grid">
+      <div class="project"><div class="project-img"><div><strong>Dashboard Penjualan</strong><br><small>Sales • Produk • Laporan</small></div></div><div class="project-body"><h3>Business Dashboard</h3><p>Monitoring penjualan dan performa bisnis dalam satu dashboard.</p></div></div>
+      <div class="project"><div class="project-img"><div><strong>Aplikasi Kasir</strong><br><small>POS • Stok • Transaksi</small></div></div><div class="project-body"><h3>Point of Sales</h3><p>Transaksi kasir dan pengelolaan produk untuk toko atau usaha.</p></div></div>
+      <div class="project"><div class="project-img"><div><strong>Keuangan</strong><br><small>Income • Expense • Cash Flow</small></div></div><div class="project-body"><h3>Financial App</h3><p>Pencatatan keuangan dan laporan untuk membantu kontrol bisnis.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-box">
+      <div><h2>Punya ide aplikasi atau website?</h2><p>Ceritakan kebutuhan bisnis Anda. Konsultasi awal gratis.</p></div>
+      <a class="btn" style="background:var(--yellow);color:var(--navy)" href="https://wa.me/6281260869484?text=Halo%2C%20saya%20ingin%20konsultasi%20tentang%20website%2Faplikasi." target="_blank">💬 Hubungi Kami Sekarang</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontak">
+  <div class="container">
+    <div class="section-title"><h2>Hubungi Kami</h2><p>Siap membantu mewujudkan solusi digital untuk bisnis Anda.</p></div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-item"><div class="contact-icon">📱</div><div><strong>Call / WhatsApp</strong><span>081260869484<br>087883753484</span></div></div>
+        <div class="contact-item"><div class="contact-icon">✉️</div><div><strong>Email</strong><span>muhlis.alfati@gmail.com</span></div></div>
+      </div>
+      <div class="contact-card">
+        <h3 style="color:var(--navy);margin-bottom:10px">Konsultasi Gratis</h3>
+        <p style="color:var(--muted);margin-bottom:18px">Jelaskan jenis usaha, kebutuhan sistem dan fitur yang Anda inginkan. Kami akan membantu menyusun solusi yang sesuai.</p>
+        <a class="btn btn-primary" href="https://wa.me/6281260869484?text=Halo%2C%20saya%20ingin%20konsultasi%20gratis." target="_blank">Chat via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">© 2026 DigitalSolusi — Jasa Pembuatan Website & Aplikasi untuk Bisnis.</div>
+</footer>
+
+<script>
+  document.querySelector('.mobile-toggle').addEventListener('click', () => {
+    const menu = document.querySelector('.menu');
+    const visible = getComputedStyle(menu).display !== 'none';
+    menu.style.display = visible ? 'none' : 'flex';
+    menu.style.position = 'absolute';
+    menu.style.top = '64px';
+    menu.style.left = '4%';
+    menu.style.right = '4%';
+    menu.style.background = '#fff';
+    menu.style.padding = '18px';
+    menu.style.borderRadius = '16px';
+    menu.style.boxShadow = '0 15px 40px rgba(8,43,92,.15)';
+    menu.style.flexDirection = 'column';
+    menu.style.alignItems = 'stretch';
+  });
+</script>
+</body>
+</html>
