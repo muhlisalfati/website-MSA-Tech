@@ -49,6 +49,10 @@
     .card{background:#fff;padding:28px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(8,43,92,.07);border:1px solid #edf3f8}
     .icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:25px;background:#e8f4ff;margin-bottom:18px}
     .card h3{color:var(--navy);margin-bottom:8px;font-size:20px}.card p{color:var(--muted)}
+    .card{display:flex;flex-direction:column}
+    .card-link{margin-top:auto;padding-top:18px;font-weight:800;color:var(--blue);display:inline-flex;align-items:center;gap:6px;align-self:flex-start}
+    .card-link:hover{text-decoration:underline}
+    .card-link span{transition:transform .2s}.card-link:hover span{transform:translateX(3px)}
     .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}
     .about-box{background:var(--navy);color:#fff;padding:36px;border-radius:28px}
     .about-box h3{font-size:28px;margin-bottom:12px}.about-box p{color:#dcecff}
@@ -59,7 +63,20 @@
     .project{border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 8px 25px rgba(8,43,92,.07)}
     .project-img{height:170px;background:linear-gradient(135deg,#0a3a76,#38a6ff);padding:20px;display:flex;align-items:flex-end}
     .project-img div{background:#fff;border-radius:12px;padding:14px;width:100%;box-shadow:0 10px 20px #0002}
-    .project-body{padding:20px}.project-body h3{color:var(--navy)}.project-body p{color:var(--muted);font-size:14px}
+    .project{display:flex;flex-direction:column}
+    .project-body{padding:20px;display:flex;flex-direction:column;flex:1}.project-body h3{color:var(--navy)}.project-body p{color:var(--muted);font-size:14px}
+    .project-img{position:relative}
+    .project-img .tag{position:absolute;top:14px;left:14px;width:auto;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:800;color:var(--navy);box-shadow:none}
+    .project-img small{color:var(--muted)}
+    .project-meta{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+    .project-actions{margin-top:auto;padding-top:16px}
+    .btn-sm{padding:10px 16px;border-radius:10px;font-size:14px}
+    .portfolio-sub{display:flex;justify-content:space-between;align-items:end;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+    .portfolio-sub h3{color:var(--navy);font-size:22px}
+    .portfolio-sub p{color:var(--muted);font-size:14px}
+    .portfolio-grid + .portfolio-sub{margin-top:48px}
+    .portfolio-grid.two-col{grid-template-columns:repeat(2,1fr)}
+    .note{margin-top:22px;text-align:center;color:var(--muted);font-size:14px}
     .cta{padding:65px 0}.cta-box{background:linear-gradient(120deg,var(--navy),#0a65b9);color:#fff;border-radius:28px;padding:45px;display:flex;justify-content:space-between;gap:30px;align-items:center}
     .cta-box h2{font-size:34px;line-height:1.15}.cta-box p{color:#dcecff;margin-top:10px}
     .contact{background:#f8fbfe}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
@@ -74,7 +91,7 @@
       .hero{padding-top:55px}.cta-box{flex-direction:column;align-items:flex-start}
     }
     @media(max-width:560px){
-      .cards,.portfolio-grid,.steps{grid-template-columns:1fr}
+      .cards,.portfolio-grid,.portfolio-grid.two-col,.steps{grid-template-columns:1fr}
       .hero-card{transform:none}.section-title h2{font-size:30px}.cta-box{padding:30px}.cta-box h2{font-size:28px}
       nav{height:64px}.nav-cta{display:none}
     }
@@ -127,12 +144,12 @@
   <div class="container">
     <div class="section-title"><h2>Layanan yang Kami Sediakan</h2><p>Pilih solusi sesuai kebutuhan bisnis Anda. Sistem dapat dikembangkan secara bertahap.</p></div>
     <div class="cards">
-      <div class="card"><div class="icon">🌐</div><h3>Website Bisnis</h3><p>Website company profile, toko online, landing page, katalog produk dan kebutuhan bisnis lainnya.</p></div>
-      <div class="card"><div class="icon">🧾</div><h3>Aplikasi Kasir (POS)</h3><p>Kelola transaksi, produk, harga, stok, laporan penjualan dan kebutuhan kasir secara lebih teratur.</p></div>
-      <div class="card"><div class="icon">💰</div><h3>Aplikasi Keuangan</h3><p>Catat pemasukan, pengeluaran, arus kas dan laporan keuangan dengan lebih mudah.</p></div>
-      <div class="card"><div class="icon">📦</div><h3>Manajemen Stok</h3><p>Pantau persediaan barang, stok masuk, stok keluar dan riwayat perubahan stok.</p></div>
-      <div class="card"><div class="icon">📱</div><h3>Aplikasi Mobile</h3><p>Aplikasi Android atau solusi mobile yang dapat disesuaikan dengan proses bisnis Anda.</p></div>
-      <div class="card"><div class="icon">⚙️</div><h3>Custom Application</h3><p>Sistem khusus berdasarkan alur kerja, kebutuhan dan target bisnis Anda.</p></div>
+      <div class="card"><div class="icon">🌐</div><h3>Website Bisnis</h3><p>Website company profile, toko online, landing page, katalog produk dan kebutuhan bisnis lainnya.</p><a class="card-link" href="demo/website-bisnis.html" target="_blank" rel="noopener">Lihat demo <span>→</span></a></div>
+      <div class="card"><div class="icon">🧾</div><h3>Aplikasi Kasir (POS)</h3><p>Kelola transaksi, produk, harga, stok, laporan penjualan dan kebutuhan kasir secara lebih teratur.</p><a class="card-link" href="demo/aplikasi-kasir.html" target="_blank" rel="noopener">Lihat demo <span>→</span></a></div>
+      <div class="card"><div class="icon">💰</div><h3>Aplikasi Keuangan</h3><p>Catat pemasukan, pengeluaran, arus kas dan laporan keuangan dengan lebih mudah.</p><a class="card-link" href="demo/aplikasi-keuangan.html" target="_blank" rel="noopener">Lihat demo <span>→</span></a></div>
+      <div class="card"><div class="icon">📦</div><h3>Manajemen Stok</h3><p>Pantau persediaan barang, stok masuk, stok keluar dan riwayat perubahan stok.</p><a class="card-link" href="demo/manajemen-stok.html" target="_blank" rel="noopener">Lihat demo <span>→</span></a></div>
+      <div class="card"><div class="icon">📱</div><h3>Aplikasi Mobile</h3><p>Aplikasi Android atau solusi mobile yang dapat disesuaikan dengan proses bisnis Anda.</p><a class="card-link" href="demo/aplikasi-mobile.html" target="_blank" rel="noopener">Lihat demo <span>→</span></a></div>
+      <div class="card"><div class="icon">⚙️</div><h3>Custom Application</h3><p>Sistem khusus berdasarkan alur kerja, kebutuhan dan target bisnis Anda.</p><a class="card-link" href="https://wa.me/6281260869484?text=Halo%2C%20saya%20ingin%20konsultasi%20aplikasi%20custom." target="_blank" rel="noopener">Konsultasikan kebutuhan <span>→</span></a></div>
     </div>
   </div>
 </section>
@@ -170,12 +187,24 @@
 
 <section id="portfolio">
   <div class="container">
-    <div class="section-title"><h2>Contoh Solusi</h2><p>Contoh jenis sistem yang dapat kami kembangkan.</p></div>
-    <div class="portfolio-grid">
-      <div class="project"><div class="project-img"><div><strong>Dashboard Penjualan</strong><br><small>Sales • Produk • Laporan</small></div></div><div class="project-body"><h3>Business Dashboard</h3><p>Monitoring penjualan dan performa bisnis dalam satu dashboard.</p></div></div>
-      <div class="project"><div class="project-img"><div><strong>Aplikasi Kasir</strong><br><small>POS • Stok • Transaksi</small></div></div><div class="project-body"><h3>Point of Sales</h3><p>Transaksi kasir dan pengelolaan produk untuk toko atau usaha.</p></div></div>
-      <div class="project"><div class="project-img"><div><strong>Keuangan</strong><br><small>Income • Expense • Cash Flow</small></div></div><div class="project-body"><h3>Financial App</h3><p>Pencatatan keuangan dan laporan untuk membantu kontrol bisnis.</p></div></div>
+    <div class="section-title"><h2>Portfolio</h2><p>Proyek yang sudah berjalan dan contoh aplikasi yang bisa langsung Anda coba.</p></div>
+
+    <div class="portfolio-sub"><div><h3>Proyek klien</h3><p>Website yang sudah online dan digunakan.</p></div></div>
+    <div class="portfolio-grid two-col">
+      <div class="project"><div class="project-img" style="background:linear-gradient(135deg,#1f5a2e,#6cbf62)"><div><strong>Kelompok Tani Al Abror</strong><br><small>Profil • Galeri • Portal admin</small></div></div><div class="project-body"><div class="project-meta">Website organisasi</div><h3>Website Kelompok Tani</h3><p>Website multi-halaman dengan galeri foto dan video, statistik pengunjung, formulir kunjungan terhubung WhatsApp, dan portal admin untuk memperbarui konten.</p><!-- PROYEK-1: ganti # dengan alamat website, lalu hapus tanda komentar di baris berikut --><!-- <div class="project-actions"><a class="btn btn-secondary btn-sm" href="#" target="_blank" rel="noopener">Kunjungi website →</a></div> --></div></div>
+      <div class="project"><div class="project-img" style="background:linear-gradient(135deg,#0b4f4a,#3aa99a)"><div><strong>Yayasan Keagamaan</strong><br><small>Profil • Program • Kegiatan</small></div></div><div class="project-body"><div class="project-meta">Website yayasan</div><h3>Website Yayasan</h3><p>Website profil yayasan untuk menyampaikan program, kegiatan, dan informasi kontak kepada jamaah dan donatur.</p><!-- PROYEK-2: ganti # dengan alamat website, lalu hapus tanda komentar di baris berikut --><!-- <div class="project-actions"><a class="btn btn-secondary btn-sm" href="#" target="_blank" rel="noopener">Kunjungi website →</a></div> --></div></div>
     </div>
+
+    <div class="portfolio-sub"><div><h3>Demo aplikasi</h3><p>Contoh untuk usaha fiktif, sudah berisi data contoh. Silakan dicoba langsung.</p></div></div>
+    <div class="portfolio-grid">
+      <div class="project"><div class="project-img" style="background:linear-gradient(135deg,#1e382c,#4f7d62)"><div class="tag">Demo interaktif</div><div><strong>Kopi Lereng Ijen</strong><br><small>Profil • Katalog • Pesan via WA</small></div></div><div class="project-body"><div class="project-meta">Website Bisnis</div><h3>Website Roastery Kopi</h3><p>Profil usaha, katalog produk dengan filter, dan keranjang yang menyusun pesanan WhatsApp otomatis.</p><div class="project-actions"><a class="btn btn-primary btn-sm" href="demo/website-bisnis.html" target="_blank" rel="noopener">Coba demo →</a></div></div></div>
+      <div class="project"><div class="project-img" style="background:linear-gradient(135deg,#0f4f49,#22a090)"><div class="tag">Demo interaktif</div><div><strong>Warmindo Barokah</strong><br><small>Transaksi • Struk • Laporan harian</small></div></div><div class="project-body"><div class="project-meta">Aplikasi Kasir (POS)</div><h3>Kasir Warung Makan</h3><p>Transaksi tunai, QRIS, dan transfer, cetak struk, stok menu berkurang otomatis, serta laporan omzet harian.</p><div class="project-actions"><a class="btn btn-primary btn-sm" href="demo/aplikasi-kasir.html" target="_blank" rel="noopener">Coba demo →</a></div></div></div>
+      <div class="project"><div class="project-img" style="background:linear-gradient(135deg,#123a6b,#3f87d6)"><div class="tag">Demo interaktif</div><div><strong>Laundry Kilat Bersih</strong><br><small>Kas & bank • Grafik • Laba rugi</small></div></div><div class="project-body"><div class="project-meta">Aplikasi Keuangan</div><h3>Pembukuan Usaha Laundry</h3><p>Catat pemasukan dan pengeluaran, pantau saldo kas dan bank, grafik 6 bulan, serta laporan laba rugi bulanan.</p><div class="project-actions"><a class="btn btn-primary btn-sm" href="demo/aplikasi-keuangan.html" target="_blank" rel="noopener">Coba demo →</a></div></div></div>
+      <div class="project"><div class="project-img" style="background:linear-gradient(135deg,#3a3b36,#e0661b)"><div class="tag">Demo interaktif</div><div><strong>TB Sumber Rejeki</strong><br><small>Stok masuk/keluar • Opname • Kartu stok</small></div></div><div class="project-body"><div class="project-meta">Manajemen Stok</div><h3>Stok Toko Bangunan</h3><p>Status stok aman atau menipis, stok masuk dan keluar, stok opname, kartu stok per barang, dan saran restok.</p><div class="project-actions"><a class="btn btn-primary btn-sm" href="demo/manajemen-stok.html" target="_blank" rel="noopener">Coba demo →</a></div></div></div>
+      <div class="project"><div class="project-img" style="background:linear-gradient(135deg,#2f6b45,#8a4b1e)"><div class="tag">Demo interaktif</div><div><strong>Dapur Bu Ani</strong><br><small>Pesanan • DP • Jadwal ambil</small></div></div><div class="project-body"><div class="project-meta">Aplikasi Mobile</div><h3>Pesanan Kue Rumahan</h3><p>Aplikasi HP untuk mencatat pesanan, jadwal ambil atau antar, status DP dan pelunasan, serta omzet mingguan.</p><div class="project-actions"><a class="btn btn-primary btn-sm" href="demo/aplikasi-mobile.html" target="_blank" rel="noopener">Coba demo →</a></div></div></div>
+      <div class="project"><div class="project-img" style="background:linear-gradient(135deg,#082b5c,#0879e8)"><div><strong>Aplikasi sesuai kebutuhan</strong><br><small>Alur kerja • Laporan • Integrasi</small></div></div><div class="project-body"><div class="project-meta">Custom Application</div><h3>Punya alur kerja sendiri?</h3><p>Ceritakan proses bisnis Anda. Kami bantu susun sistem yang sesuai, dimulai dari fitur paling penting.</p><div class="project-actions"><a class="btn btn-secondary btn-sm" href="https://wa.me/6281260869484?text=Halo%2C%20saya%20ingin%20konsultasi%20aplikasi%20custom." target="_blank" rel="noopener">Konsultasi gratis →</a></div></div></div>
+    </div>
+    <p class="note">Data pada demo adalah contoh dan hanya tersimpan di browser Anda.</p>
   </div>
 </section>
 
