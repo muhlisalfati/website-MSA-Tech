@@ -1,2 +1,2 @@
 # website-MSA-Tech
-Mitra Sarana Aplikasi, jasa pembuatan website dan aplikasi UMKM
+Mitra Solusi Andalan Technology, jasa pembuatan website dan aplikasi UMKM
